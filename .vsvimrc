@@ -1,0 +1,30 @@
+map gI :vsc Edit.GoToImplementation<CR> <esc> zz
+map gb :vsc View.NavigateBackward<CR>
+map gr :vsc Edit.FindAllReferences<CR>
+map gp :vsc Edit.PeekDefinition<CR>
+set number
+set history=10000
+
+let mapleader=" "
+nnoremap <leader>m :vsc Edit.NextMethod<cr>
+nnoremap <leader>M :vsc Edit.PreviousMethod<cr>
+nnoremap <leader>h :vsc Edit.QuickInfo<cr>
+nnoremap <leader>f :vsc Edit.FormatDocument<cr>
+nnoremap <leader>T :vsc RunAlltestsInSolution<cr>
+nmap gi `^i
+
+nnoremap R :vsc Refactor.Rename<cr>
+" jump between compilation errors
+nnoremap <leader>e :vsc View.NextError<cr>
+nnoremap <leader>E :vsc View.PreviousError<cr>
+
+" testing and debugging
+nnoremap <leader>b :vsc Debug.ToggleBreakpoint<cr>
+nnoremap <leader>r :vsc TestExplorer.RunAllTestsInContext<cr>
+nnoremap <leader>R :vsc TestExplorer.DebugAllTestsInContext<cr>
+
+" open the change parameter window, a bit fake because it's not a text-object
+nnoremap cia :vsc Refactor.ReorderParameters<cr>
+
+" insert mode
+inoremap jj <esc>
