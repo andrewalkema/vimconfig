@@ -19,4 +19,58 @@
     "editor.cursorSmoothCaretAnimation": "on",
     "vim.sneak": true,
     "vim.commandLineModeKeyBindingsNonRecursive": [],
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+    "gitlens.mode.active": "zen",
+    "vim.statusBarColors.commandlineinprogress": "",
+    "vim.leader": "<Space>",
+    "vim.normalModeKeyBindings": [],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before" : ["J"],
+            "after" : ["5", "j"]
+        },
+        {
+            "before" : ["K"],
+            "after" : ["5", "k"]
+        },
+        {
+            "before" : ["<leader>", "j"],
+            "after" : ["J"]
+        },
+        {
+            "before": ["<Leader>", "p"],
+            "commands": ["workbench.action.showCommands"],
+        },
+        {
+            "before": ["<Leader>", "t"],
+            "commands": ["workbench.action.gotoSymbol"]
+        },
+        {
+            "before": ["g", "b"],
+            "commands": ["workbench.action.navigateBackInNavigationLocations"]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ]
 }
